@@ -1,33 +1,23 @@
 export default function BottomNav({ page, setPage }) {
+  const tabs = [
+    { id: "home", icon: "🏠", label: "Home" },
+    { id: "itinerary", icon: "📅", label: "Trip" },
+    { id: "food", icon: "🍽️", label: "Food" },
+    { id: "packing", icon: "🎒", label: "Packing" },
+  ];
+
   return (
     <nav className="bottom-nav">
-      <button
-        className={page === "home" ? "nav-button active" : "nav-button"}
-        onClick={() => setPage("home")}
-      >
-        Home
-      </button>
-
-      <button
-        className={page === "itinerary" ? "nav-button active" : "nav-button"}
-        onClick={() => setPage("itinerary")}
-      >
-        Itinerary
-      </button>
-
-      <button
-        className={page === "food" ? "nav-button active" : "nav-button"}
-        onClick={() => setPage("food")}
-      >
-        Food
-      </button>
-
-      <button
-        className={page === "packing" ? "nav-button active" : "nav-button"}
-        onClick={() => setPage("packing")}
-      >
-        Packing
-      </button>
+      {tabs.map((tab) => (
+        <button
+          key={tab.id}
+          className={`nav-button ${page === tab.id ? "active" : ""}`}
+          onClick={() => setPage(tab.id)}
+        >
+          <div>{tab.icon}</div>
+          <span>{tab.label}</span>
+        </button>
+      ))}
     </nav>
   );
 }
