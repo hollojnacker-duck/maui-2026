@@ -140,7 +140,7 @@ function refreshWord() {
       <section className="card">
 
         <span className="label">
-          YOUR STAY
+          RESORT INFORMATION
         </span>
 
         <div className="upcoming-list">
@@ -171,7 +171,7 @@ function refreshWord() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <strong>🍹 Food & Drink</strong>
+            <strong>🍹 Resort Food & Drink</strong>
             <span>↗</span>
           </a>
 

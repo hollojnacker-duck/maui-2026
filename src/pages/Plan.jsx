@@ -27,7 +27,24 @@ const heroImages = {
 
 export default function PlanPage({ setPage }) {
 
-  const [selectedDay, setSelectedDay] = useState(0);
+  // Automatically open to today's itinerary during the trip
+
+const tripStart = new Date(2026, 7, 17); // August 17, 2026
+const today = new Date();
+
+tripStart.setHours(0, 0, 0, 0);
+today.setHours(0, 0, 0, 0);
+
+const daysSinceStart = Math.floor(
+  (today - tripStart) / (1000 * 60 * 60 * 24)
+);
+
+const initialDay = Math.min(
+  Math.max(daysSinceStart, 0),
+  trip.itinerary.length - 1
+);
+
+const [selectedDay, setSelectedDay] = useState(initialDay);
 
   const currentDay = trip.itinerary[selectedDay];
 
