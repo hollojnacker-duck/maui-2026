@@ -880,3 +880,14 @@ background-repeat: no-repeat;
 .refresh-word:active {
   transform: scale(.9);
 }
+
+.day-selector {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+
+  margin-top: 10px;   /* Add this */
+  margin-bottom: 6px;
+
+  padding: 0;
+}
