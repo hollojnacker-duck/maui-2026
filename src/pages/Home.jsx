@@ -1,4 +1,5 @@
 import honuaKaiHero from "../assets/honua-kai-hero.jpg";
+import { useState } from "react";
 import { hawaiianWords } from "../data/hawaiianWords";
 import { resources } from "../data/resources";
 
@@ -6,19 +7,18 @@ export default function HomePage() {
 
   // Show a new Hawaiian word every 30 minutes
 
-const CHANGE_INTERVAL = 30 * 60 * 1000;
+const CHANGE_INTERVAL = 10 * 60 * 1000;
 
 const now = Date.now();
 
-let savedIndex = Number(localStorage.getItem("hawaiianWordIndex"));
+let initialIndex = Number(localStorage.getItem("hawaiianWordIndex"));
 let lastUpdated = Number(localStorage.getItem("hawaiianWordTimestamp"));
 
 if (
-  Number.isNaN(savedIndex) ||
+  Number.isNaN(initialIndex) ||
   Number.isNaN(lastUpdated) ||
   now - lastUpdated > CHANGE_INTERVAL
 ) {
-
   let newIndex;
 
   do {
@@ -27,23 +27,36 @@ if (
     );
   } while (
     hawaiianWords.length > 1 &&
-    newIndex === savedIndex
+    newIndex === initialIndex
   );
 
-  savedIndex = newIndex;
+  initialIndex = newIndex;
 
-  localStorage.setItem(
-    "hawaiianWordIndex",
-    savedIndex
-  );
-
-  localStorage.setItem(
-    "hawaiianWordTimestamp",
-    now
-  );
+  localStorage.setItem("hawaiianWordIndex", initialIndex);
+  localStorage.setItem("hawaiianWordTimestamp", now);
 }
 
-const wordOfDay = hawaiianWords[savedIndex];
+const [wordIndex, setWordIndex] = useState(initialIndex);
+
+const wordOfDay = hawaiianWords[wordIndex];
+
+function refreshWord() {
+  let newIndex;
+
+  do {
+    newIndex = Math.floor(
+      Math.random() * hawaiianWords.length
+    );
+  } while (
+    hawaiianWords.length > 1 &&
+    newIndex === wordIndex
+  );
+
+  localStorage.setItem("hawaiianWordIndex", newIndex);
+  localStorage.setItem("hawaiianWordTimestamp", Date.now());
+
+  setWordIndex(newIndex);
+}
 
   return (
     <div className="app">
@@ -88,9 +101,22 @@ const wordOfDay = hawaiianWords[savedIndex];
 
       <section className="card">
 
-        <span className="label">
-          🌺 ISLAND LINGO
-        </span>
+        <div className="card-header">
+
+  <span className="label">
+    🌺 ISLAND LINGO
+  </span>
+
+  <button
+  className="refresh-word"
+  onClick={refreshWord}
+  aria-label="Show another Hawaiian word"
+  title="Another Word"
+>
+  ⟳
+</button>
+
+</div>
 
         <h2 className="lingo-word">
           {wordOfDay.emoji} {wordOfDay.word}

@@ -103,7 +103,7 @@ export const hawaiianWords = [
   },
   {
     word: "ʻĀina",
-    emoji: "🌴",
+    emoji: "🌱",
     pronunciation: "AH ee nah",
     meaning: "Land • Earth"
   },
@@ -222,11 +222,11 @@ export const hawaiianWords = [
     meaning: "Language • Speech"
   },
   {
-    word: "Hāna",
-    emoji: "🚗",
-    pronunciation: "HAH nah",
-    meaning: "Work • Also the famous Maui town"
-  },
+  word: "Hāna",
+  emoji: "🌺",
+  pronunciation: "HAH nah",
+  meaning: "The famous Maui town on the Road to Hāna"
+},
   {
     word: "Nēnē",
     emoji: "🪿",
@@ -253,7 +253,7 @@ export const hawaiianWords = [
   },
   {
     word: "ʻUlu",
-    emoji: "🍈",
+    emoji: "🌳",
     pronunciation: "OO loo",
     meaning: "Breadfruit"
   },
@@ -316,5 +316,167 @@ export const hawaiianWords = [
     emoji: "🎶",
     pronunciation: "MEH leh",
     meaning: "Song • Music"
-  }
+  },
+{
+  word: "Alanui",
+  emoji: "🛣️",
+  pronunciation: "ah lah NOO ee",
+  meaning: "Road • Highway"
+},
+{
+  word: "Awa",
+  emoji: "⚓",
+  pronunciation: "AH vah",
+  meaning: "Harbor"
+},
+{
+  word: "Kulanakauhale",
+  emoji: "🏙️",
+  pronunciation: "koo lah nah kow HAH leh",
+  meaning: "Town • City"
+},
+{
+  word: "Kaiāulu",
+  emoji: "🏘️",
+  pronunciation: "kye ah OO loo",
+  meaning: "Community • Neighborhood"
+},
+{
+  word: "Anuenue",
+  emoji: "🌈",
+  pronunciation: "ah noo eh NOO eh",
+  meaning: "Rainbow"
+},
+{
+  word: "Lā",
+  emoji: "☀️",
+  pronunciation: "LAH",
+  meaning: "Sun • Day"
+},
+{
+  word: "Ao",
+  emoji: "☁️",
+  pronunciation: "OW",
+  meaning: "Cloud"
+},
+{
+  word: "One",
+  emoji: "🏖️",
+  pronunciation: "OH neh",
+  meaning: "Sand"
+},
+{
+  word: "Moku",
+  emoji: "🏝️",
+  pronunciation: "MOH koo",
+  meaning: "Island"
+},
+{
+  word: "Manu",
+  emoji: "🐦",
+  pronunciation: "MAH noo",
+  meaning: "Bird"
+},
+{
+  word: "Heʻe",
+  emoji: "🐙",
+  pronunciation: "HEH eh",
+  meaning: "Octopus"
+},
+{
+  word: "Waʻa",
+  emoji: "🛶",
+  pronunciation: "VAH ah",
+  meaning: "Canoe"
+},
+{
+  word: "Hoe",
+  emoji: "🛶",
+  pronunciation: "HOH eh",
+  meaning: "Paddle"
+},
+{
+  word: "Niu",
+  emoji: "🥥",
+  pronunciation: "NEE oo",
+  meaning: "Coconut"
+},
+{
+  word: "Lilikoi",
+  emoji: "🥭",
+  pronunciation: "lee lee KOY",
+  meaning: "Passion fruit"
+},
+{
+  word: "Maiʻa",
+  emoji: "🍌",
+  pronunciation: "my AH",
+  meaning: "Banana"
+},
+{
+  word: "ʻUala",
+  emoji: "🍠",
+  pronunciation: "oo AH lah",
+  meaning: "Sweet potato"
+},
+{
+  word: "Hauʻoli",
+  emoji: "😊",
+  pronunciation: "how OH lee",
+  meaning: "Happy • Joyful"
+},
+{
+  word: "ʻIke",
+  emoji: "💡",
+  pronunciation: "EE keh",
+  meaning: "Knowledge • To know"
+},
+{
+  word: "Akamai",
+  emoji: "🧠",
+  pronunciation: "ah kah MY",
+  meaning: "Smart • Clever"
+},
+{
+  word: "Nohea",
+  emoji: "😍",
+  pronunciation: "noh HEH ah",
+  meaning: "Lovely • Beautiful"
+},
+{
+  word: "Moe",
+  emoji: "😴",
+  pronunciation: "MOH eh",
+  meaning: "Sleep"
+},
+{
+  word: "Lilikoi",
+  emoji: "🥭",
+  pronunciation: "lee lee KOY",
+  meaning: "Passion fruit"
+},
+{
+  word: "ʻAu",
+  emoji: "🏊",
+  pronunciation: "OW",
+  meaning: "To swim"
+},
+{
+  word: "Lau",
+  emoji: "🍃",
+  pronunciation: "LOW",
+  meaning: "Leaf"
+},
+{
+  word: "Uhu",
+  emoji: "🐠",
+  pronunciation: "OO hoo",
+  meaning: "Parrotfish"
+},
+{
+  word: "ʻIno",
+  emoji: "⛈️",
+  pronunciation: "EE noh",
+  meaning: "Stormy • Bad weather"
+}
 ];
