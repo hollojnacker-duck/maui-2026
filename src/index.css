@@ -24,3 +24,120 @@ body {
   justify-content: center;
   width: 100%;
 }
+
+/* Food Guide Styling */
+
+.food-page {
+  padding-bottom: 110px;
+}
+
+.food-area {
+  margin-bottom: 28px;
+}
+
+.area-header {
+  padding: 18px 8px 14px;
+}
+
+.area-header h2 {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 0;
+}
+
+.featured-section {
+  margin-bottom: 28px;
+}
+
+.featured-restaurant {
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.featured-restaurant:last-child {
+  border-bottom: none;
+}
+
+.featured-restaurant h2 {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.restaurant-date {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 4px 0;
+}
+
+.rating {
+  font-size: 18px;
+  margin: 6px 0;
+}
+
+.restaurant-card {
+  background: rgba(255,255,255,0.75);
+  border-radius: 18px;
+  padding: 14px;
+  margin: 10px 0;
+}
+
+.restaurant-card h3 {
+  font-size: 18px;
+  margin: 0 0 5px;
+}
+
+.restaurant-meta {
+  font-size: 15px;
+  opacity: 0.8;
+  margin: 4px 0 8px;
+}
+
+.restaurant-card p {
+  margin: 8px 0;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0;
+}
+
+.tag {
+  background: rgba(0,0,0,0.06);
+  border-radius: 999px;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.restaurant-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.restaurant-links a {
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.day-selector {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  margin-bottom: 20px;
+  padding-bottom: 4px;
+}
+
+.day-selector button {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.active-day {
+  font-weight: 700;
+}
