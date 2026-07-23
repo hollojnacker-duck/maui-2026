@@ -165,7 +165,7 @@ export const resources = {
     ]
   },
 
-  whalersVillage: {
+  whalersVillageShopping: {
     title: "Whalers Village",
     icon: "🛍️",
     actions: [
@@ -202,18 +202,6 @@ export const resources = {
         icon: "📍",
         label: "Directions",
         url: "https://maps.google.com/?q=Alamo+Car+Rental+Kahului+Airport"
-      }
-    ]
-  },
-
-  airport: {
-    title: "OGG Airport",
-    icon: "✈️",
-    actions: [
-      {
-        icon: "📍",
-        label: "Directions",
-        url: "https://maps.google.com/?q=Kahului+Airport"
       }
     ]
   },
@@ -346,18 +334,6 @@ dukesFinal: {
   ]
 },
 
-costcoGas: {
-  title: "Costco Gas",
-  icon: "⛽",
-  actions: [
-    {
-      icon: "📍",
-      label: "Directions",
-      url: "https://maps.google.com/?q=Costco+Kahului"
-    }
-  ]
-},
-
 oggAirport: {
   title: "Kahului Airport (OGG)",
   icon: "✈️",
@@ -376,6 +352,30 @@ oggAirport: {
       icon: "🛫",
       label: "Airport Information",
       url: "https://airports.hawaii.gov/ogg/"
+    }
+  ]
+},
+
+timesSupermarket: {
+  title: "Times Supermarket",
+  icon: "🛒",
+  actions: [
+    {
+      icon: "📍",
+      label: "Directions",
+      url: "https://maps.google.com/?q=Times+Supermarket+Honokowai"
+    }
+  ]
+},
+
+safeway: {
+  title: "Safeway",
+  icon: "🛒",
+  actions: [
+    {
+      icon: "📍",
+      label: "Directions",
+      url: "https://maps.google.com/?q=Safeway+Lahaina+HI"
     }
   ]
 },

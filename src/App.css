@@ -819,3 +819,17 @@ background-repeat: no-repeat;
   font-size: 15px;
   font-weight: 600;
 }
+
+.upcoming-subtitle {
+  margin: 2px 0 0;
+  color: #6b7280;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.pronunciation {
+  margin: 6px 0;
+  font-style: italic;
+  color: #6b7280;
+  font-size: 15px;
+}

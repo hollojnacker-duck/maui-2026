@@ -1,20 +1,49 @@
 import honuaKaiHero from "../assets/honua-kai-hero.jpg";
 import { hawaiianWords } from "../data/hawaiianWords";
-
+import { resources } from "../data/resources";
 
 export default function HomePage() {
 
-  const dayOfYear = Math.floor(
-    (new Date() - new Date(new Date().getFullYear(), 0, 0)) /
-      86400000
+  // Show a new Hawaiian word every 30 minutes
+
+const CHANGE_INTERVAL = 30 * 60 * 1000;
+
+const now = Date.now();
+
+let savedIndex = Number(localStorage.getItem("hawaiianWordIndex"));
+let lastUpdated = Number(localStorage.getItem("hawaiianWordTimestamp"));
+
+if (
+  Number.isNaN(savedIndex) ||
+  Number.isNaN(lastUpdated) ||
+  now - lastUpdated > CHANGE_INTERVAL
+) {
+
+  let newIndex;
+
+  do {
+    newIndex = Math.floor(
+      Math.random() * hawaiianWords.length
+    );
+  } while (
+    hawaiianWords.length > 1 &&
+    newIndex === savedIndex
   );
 
+  savedIndex = newIndex;
 
-  const wordOfDay =
-    hawaiianWords[
-      dayOfYear % hawaiianWords.length
-    ];
+  localStorage.setItem(
+    "hawaiianWordIndex",
+    savedIndex
+  );
 
+  localStorage.setItem(
+    "hawaiianWordTimestamp",
+    now
+  );
+}
+
+const wordOfDay = hawaiianWords[savedIndex];
 
   return (
     <div className="app">
@@ -55,6 +84,33 @@ export default function HomePage() {
       </section>
 
 
+      {/* ISLAND LINGO */}
+
+      <section className="card">
+
+        <span className="label">
+          🌺 ISLAND LINGO
+        </span>
+
+        <h2 className="lingo-word">
+          {wordOfDay.emoji} {wordOfDay.word}
+        </h2>
+
+        <p className="pronunciation">
+          ({wordOfDay.pronunciation})
+        </p>
+
+        <p>
+          {wordOfDay.meaning}
+        </p>
+
+        <p className="lingo-footer">
+          🤙 Learn a little Hawaiian every time you visit.
+        </p>
+
+      </section>
+
+
       <section className="card">
 
         <span className="label">
@@ -69,16 +125,9 @@ export default function HomePage() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <strong>
-              📍 Honua Kai Property Map
-            </strong>
-
-            <span>
-              ↗
-            </span>
-
+            <strong>📍 Honua Kai Property Map</strong>
+            <span>↗</span>
           </a>
-
 
           <a
             className="upcoming-item"
@@ -86,16 +135,9 @@ export default function HomePage() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <strong>
-              🏊 Resort Activities
-            </strong>
-
-            <span>
-              ↗
-            </span>
-
+            <strong>🏊 Resort Activities</strong>
+            <span>↗</span>
           </a>
-
 
           <a
             className="upcoming-item"
@@ -103,16 +145,9 @@ export default function HomePage() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <strong>
-              🍹 Food & Drink
-            </strong>
-
-            <span>
-              ↗
-            </span>
-
+            <strong>🍹 Food & Drink</strong>
+            <span>↗</span>
           </a>
-
 
           <a
             className="upcoming-item"
@@ -120,14 +155,8 @@ export default function HomePage() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <strong>
-              🏠 Maui Resort Rentals
-            </strong>
-
-            <span>
-              ↗
-            </span>
-
+            <strong>🏠 Maui Resort Rentals</strong>
+            <span>↗</span>
           </a>
 
         </div>
@@ -149,16 +178,9 @@ export default function HomePage() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <strong>
-              ☀️ Weather
-            </strong>
-
-            <span>
-              ↗
-            </span>
-
+            <strong>☀️ Weather</strong>
+            <span>↗</span>
           </a>
-
 
           <a
             className="upcoming-item"
@@ -166,16 +188,9 @@ export default function HomePage() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <strong>
-              🌊 Snorkeling
-            </strong>
-
-            <span>
-              ↗
-            </span>
-
+            <strong>🌊 Snorkeling</strong>
+            <span>↗</span>
           </a>
-
 
           <a
             className="upcoming-item"
@@ -183,14 +198,8 @@ export default function HomePage() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <strong>
-              🌙 Tides
-            </strong>
-
-            <span>
-              ↗
-            </span>
-
+            <strong>🌙 Tides</strong>
+            <span>↗</span>
           </a>
 
         </div>
@@ -201,21 +210,78 @@ export default function HomePage() {
       <section className="card">
 
         <span className="label">
-          🌺 HAWAIIAN WORD OF THE DAY
+          NEARBY GROCERIES
         </span>
 
+        <div className="upcoming-list">
 
-        <h2>
-          {wordOfDay.emoji} {wordOfDay.word}
-        </h2>
+          <div className="upcoming-item">
+
+            <div>
+
+              <strong>
+                🛍️ Whalers General Store
+              </strong>
+
+              <p className="upcoming-subtitle">
+                Resort Market • Konea Lobby
+              </p>
+
+            </div>
+
+          </div>
 
 
-        <p>
-          {wordOfDay.meaning}
-        </p>
+          <a
+            className="upcoming-item"
+            href={resources.timesSupermarket.actions[0].url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <div>
+
+              <strong>
+                🛒 Times Supermarket
+              </strong>
+
+              <p className="upcoming-subtitle">
+                5 min drive • Honokōwai
+              </p>
+
+            </div>
+
+            <span>↗</span>
+
+          </a>
+
+
+          <a
+            className="upcoming-item"
+            href={resources.safeway.actions[0].url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <div>
+
+              <strong>
+                🛒 Safeway
+              </strong>
+
+              <p className="upcoming-subtitle">
+                10 min drive • Lahaina
+              </p>
+
+            </div>
+
+            <span>↗</span>
+
+          </a>
+
+        </div>
 
       </section>
-
 
     </div>
   );
