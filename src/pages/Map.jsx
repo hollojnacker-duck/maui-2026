@@ -128,7 +128,7 @@ export default function MapPage() {
         <MapContainer
           bounds={bounds}
           boundsOptions={{
-            padding: [20, 20],
+            padding: [60, 60],
           }}
           scrollWheelZoom
         >
