@@ -1018,3 +1018,21 @@ background-repeat: no-repeat;
 .map-popup .leaflet-popup-tip {
   box-shadow: none;
 }
+
+@media (min-width: 768px) {
+
+  .app,
+  .map-page {
+    max-width: 860px;
+    padding: 24px;
+  }
+
+  .bottom-nav {
+    width: 600px;
+  }
+
+  .map-wrapper {
+    height: 75vh;
+  }
+
+}
