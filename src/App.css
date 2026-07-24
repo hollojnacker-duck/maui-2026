@@ -1050,7 +1050,13 @@ background-repeat: no-repeat;
 }
 
   .map-wrapper {
+    height: calc(82vh - 24px);
+}
+
+@media (min-width: 786px) {
+    .map-wrapper {
     height: calc(75vh - 24px);
+    }
 }
 
 .hero {
