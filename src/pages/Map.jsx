@@ -49,7 +49,7 @@ function createMarker(type) {
   );
 
   return divIcon({
-    className: "",
+    className: type === "home" ? "home-marker" : "",
     html: `
       <div
         style="
