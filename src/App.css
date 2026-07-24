@@ -311,7 +311,7 @@ background-repeat: no-repeat;
 
 .itinerary-hero {
   position: relative;
-  height: 240px;
+  height: 340px;
 }
 
 .itinerary-hero img {
@@ -1053,6 +1053,13 @@ background-repeat: no-repeat;
     height: calc(75vh - 24px);
 }
 
+.hero {
+  min-height: 420px;
+}
+
+.home-overlay {
+  min-height: 420px;
+}
   .restaurant-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
