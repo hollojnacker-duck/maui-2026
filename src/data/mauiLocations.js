@@ -1,0 +1,88 @@
+const mauiLocations = [
+  {
+    id: 1,
+    name: "Honua Kai Resort",
+    category: "planned",
+    position: [20.9445, -156.6924],
+    description: "Home base for the week.",
+  },
+  {
+    id: 2,
+    name: "Airport Beach",
+    category: "beach",
+    position: [20.9440, -156.6938],
+    description: "Excellent snorkeling with frequent sea turtles.",
+  },
+  {
+    id: 3,
+    name: "Duke's Beach House",
+    category: "restaurant",
+    position: [20.9448, -156.6922],
+    description: "Tuesday dinner reservation.",
+  },
+  {
+    id: 4,
+    name: "Black Rock",
+    category: "beach",
+    position: [20.9218, -156.6966],
+    description: "Popular snorkeling and cliff jumping spot.",
+  },
+  {
+    id: 5,
+    name: "Kapalua Coastal Trail",
+    category: "planned",
+    position: [20.9998, -156.6679],
+    description: "Easy coastal walk planned for Tuesday.",
+  },
+  {
+    id: 6,
+    name: "Nakalele Blowhole",
+    category: "planned",
+    position: [21.0275, -156.6386],
+    description: "Scenic stop on the northwest coast.",
+  },
+  {
+    id: 7,
+    name: "Waiheʻe Ridge Trail",
+    category: "planned",
+    position: [20.9425, -156.5315],
+    description: "Saturday morning hike.",
+  },
+  {
+    id: 8,
+    name: "Costco",
+    category: "planned",
+    position: [20.8766, -156.4606],
+    description: "First stop after landing.",
+  },
+  {
+    id: 9,
+    name: "Kahului Airport",
+    category: "planned",
+    position: [20.8987, -156.4305],
+    description: "Arrival and departure airport.",
+  },
+  {
+    id: 10,
+    name: "Pāʻia",
+    category: "attraction",
+    position: [20.9148, -156.3822],
+    description: "Explore shops and grab lunch.",
+  },
+  {
+    id: 11,
+    name: "Ho'okipa Beach",
+    category: "attraction",
+    position: [20.9333, -156.3555],
+    description: "Watch surfers and sea turtles.",
+  },
+  {
+    id: 12,
+    name: "Haleakalā Summit",
+    category: "planned",
+    position: [20.7097, -156.2536],
+    description: "Thursday sunset adventure.",
+  },
+];
+
+export default mauiLocations;
