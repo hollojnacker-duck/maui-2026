@@ -761,6 +761,12 @@ background-repeat: no-repeat;
   opacity: 0.75;
 }
 
+.restaurant-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .day-selector {
   display: flex;
   gap: 8px;
@@ -911,7 +917,7 @@ background-repeat: no-repeat;
 }
 
 .map-header {
-  padding: 20px 18px 14px;
+  padding: 24px 18px 18px;
 }
 
 .map-header h1 {
@@ -938,7 +944,6 @@ background-repeat: no-repeat;
 }
 
 .map-wrapper {
-  flex: 1;
 
   margin: 0 18px;
 
@@ -1021,18 +1026,37 @@ background-repeat: no-repeat;
 
 @media (min-width: 768px) {
 
-  .app,
-  .map-page {
-    max-width: 860px;
-    padding: 24px;
-  }
-
   .bottom-nav {
-    width: 600px;
-  }
+  width: 520px;
+  max-width: calc(100% - 48px);
+
+  padding: 14px;
+
+  border-radius: 28px;
+}
+
+  .app {
+    max-width: 860px;
+
+    padding-top: 24px;
+    padding-right: 24px;
+    padding-left: 24px;
+
+    padding-bottom: 130px;
+}
+
+.map-page {
+    max-width: 860px;
+}
 
   .map-wrapper {
-    height: 75vh;
-  }
+    height: calc(75vh - 24px);
+}
+
+  .restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
 
 }

@@ -81,6 +81,12 @@ const mapLocations = [
   // ==========================
 
   {
+    name: "Kahului Airport",
+    type: "explore",
+    position: [20.898508221614982, -156.43694401054162],
+  },
+
+  {
     name: "Costco Kahului",
     type: "explore",
     position: [20.887331480096517, -156.4507832329421],
@@ -175,6 +181,51 @@ const mapLocations = [
     type: "explore",
     position: [20.79275691197376, -156.51212898434085],
   },
+
+  {
+    name: "Kapalua Tidepools",
+    type: "explore",
+    position: [21.00603170379007, -156.66596645582158],
+  },
+
+   {
+    name: "Maui Tropical Plantation",
+    type: "explore",
+    position: [20.8529495931073, -156.50622451453643],
+  },
+
+  {
+    name: "Hoapili Trail",
+    type: "explore",
+    position: [20.598451202721098, -156.41374710895383],
+  },
+
+  {
+    name: "Ulua Beach",
+    type: "explore",
+    position: [20.692756020060617, -156.44335616958097],
+  },
+
+  {
+    name: "Wailea Beach",
+    type: "explore",
+    position: [20.682108305760995, -156.4435816043602],
+  },
+
+  {
+    name: "Turtle Town",
+    type: "explore",
+    position: [20.65356967775856, -156.44267476087145],
+  },
+
+  {
+    name: "Pā Ka'oao Trailhead",
+    type: "explore",
+    position: [20.716520422716762, -156.2502780284937],
+  },
+
+
+  
 
   // ==========================
   // DINING

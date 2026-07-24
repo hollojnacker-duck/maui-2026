@@ -143,7 +143,9 @@ export default function FoodPage() {
             <h2>{area.name}</h2>
           </div>
 
-          {area.restaurants.map((restaurant, restaurantIndex) => (
+          <div className="restaurant-grid">
+
+  {area.restaurants.map((restaurant, restaurantIndex) => (
 
             <div
               className="restaurant-card"
@@ -212,8 +214,9 @@ export default function FoodPage() {
               <RestaurantLinks restaurant={restaurant} />
 
             </div>
+              ))}
 
-          ))}
+</div>
 
         </section>
 
